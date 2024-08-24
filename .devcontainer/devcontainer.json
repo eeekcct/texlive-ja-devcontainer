@@ -1,0 +1,104 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/docker-existing-dockerfile
+{
+  "name": "Texlive Docker",
+  "build": {
+    // Sets the run context to one level up instead of the .devcontainer folder.
+    "context": "../",
+    // Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
+    "dockerfile": "../Dockerfile"
+  },
+  "workspaceFolder": "/latex",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/latex,type=bind,consistency=cached",
+  // Features to add to the dev container. More info: https://containers.dev/features.
+  // "features": {},
+  // Use 'forwardPorts' to make a list of ports inside the container available locally.
+  // "forwardPorts": [],
+  // Uncomment the next line to run commands after the container is created.
+  "postCreateCommand": "npm install",
+  // Configure tool-specific properties.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "MS-CEINTL.vscode-language-pack-ja",
+        "James-Yu.latex-workshop",
+        "taichi.vscode-textlint"
+      ],
+      "settings": {
+        "files.encoding": "utf8",
+        "latex-workshop.latex.recipes": [
+          {
+            "name": "ptex2pdf->pbibtex->ptex2pdf->ptex2pdf",
+            "tools": ["ptex2pdf", "pbibtex", "ptex2pdf", "ptex2pdf"]
+          },
+          {
+            "name": "ptex2pdf",
+            "tools": ["ptex2pdf"]
+          },
+          {
+            "name": "pbibtex",
+            "tools": ["pbibtex"]
+          }
+        ],
+        "latex-workshop.latex.tools": [
+          {
+            "name": "ptex2pdf",
+            "command": "ptex2pdf",
+            "args": [
+              "-u",
+              "-l",
+              "-ot",
+              "-kanji=utf8 -synctex=1",
+              // "-od",
+              "-interaction=nonstopmode",
+              "%DOC%"
+            ]
+          },
+          {
+            "name": "pbibtex",
+            "command": "pbibtex",
+            "args": ["%DOCFILE%"]
+          }
+        ],
+        "latex-workshop.view.pdf.viewer": "tab",
+        "latex-workshop.message.latexlog.exclude": [
+          "(Font shape `(JY1|JT1|JY2|JT2)(/.*)(sl|it|sc)'.*|Some font shapes were not available.*)"
+        ],
+        "latex-workshop.latex.autoBuild.run": "never",
+        "terminal.integrated.rendererType": "dom",
+        "[tex]": {
+          // スニペット補完中にも補完を使えるようにする
+          "editor.suggest.snippetsPreventQuickSuggestions": false,
+          // インデント幅を2にする
+          "editor.tabSize": 2
+        },
+        "[latex]": {
+          // スニペット補完中にも補完を使えるようにする
+          "editor.suggest.snippetsPreventQuickSuggestions": false,
+          // インデント幅を2にする
+          "editor.tabSize": 2
+        },
+        "[bibtex]": {
+          // インデント幅を2にする
+          "editor.tabSize": 2
+        },
+        "latex-workshop.intellisense.package.enabled": true,
+        // port番号を固定
+        "latex-workshop.viewer.pdf.internal.port": 36543,
+        // texlintの設定
+        "textlint.configPath": "./.textlintrc.json",
+        "textlint.nodePath": "./node_modules",
+        "textlint.languages": [
+          "markdown",
+          "plaintext",
+          "tex",
+          "latex",
+          "bibtex"
+        ],
+        "textlint.run": "onType"
+      }
+    }
+  }
+  // Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
+  // "remoteUser": "devcontainer"
+}

@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{example2024}
+著者名.
+\newblock {\em サンプル書籍タイトル}.
+\newblock 出版社, 2024.
+
+\bibitem{sample2024}
+著者名.
+\newblock サンプル論文タイトル.
+\newblock {\em ジャーナル名}, 1(1):1--10, 2024.
+
+\end{thebibliography}
