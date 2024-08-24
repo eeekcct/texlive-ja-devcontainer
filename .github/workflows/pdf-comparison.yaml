@@ -1,0 +1,31 @@
+name: PDF Comparison
+
+on:
+  workflow_run:
+    workflows:
+      - "Docker Build Check"
+    types:
+      - completed
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download PDF artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: pdf-artifact
+
+      - name: Build pdf-to-image
+        run: make build.pdf
+
+      - name: Convert PDF to PNG
+        run: |
+          mkdir tmp
+          docker run --rm -v $(pwd):/pdf pdf sample/sample.pdf tmp/ref -png
+          ls tmp/ref

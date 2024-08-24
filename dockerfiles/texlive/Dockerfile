@@ -38,12 +38,13 @@ RUN ln -sf /usr/local/texlive/*/bin/* /usr/local/bin/texlive
 ENV PATH="/usr/local/bin/texlive:$PATH"
 
 # 必要なパッケージをインストール
-RUN  tlmgr update --self --all \
+RUN tlmgr update --self --all \
   && tlmgr install collection-fontsrecommended collection-langjapanese 
   # 時間がかかるのでコメントアウト
   # collection-latexextra latexmk
 
-# # 追加パッケージのインストール
-RUN tlmgr install cite multirow caption fancybox siunitx mhchem titlesec chemgreek
+# 追加パッケージのインストール
+RUN tlmgr update --self --all \
+  && tlmgr install cite multirow caption fancybox siunitx mhchem titlesec chemgreek
 
 WORKDIR /latex

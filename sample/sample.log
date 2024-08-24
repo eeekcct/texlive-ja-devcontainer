@@ -1,9 +1,9 @@
-This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.uptex) (TeX Live 2024) (preloaded format=uplatex 2024.8.24)  24 AUG 2024 10:09
+This is e-upTeX, Version 3.141592653-p4.1.1-u1.30-230214-2.6 (utf8.uptex) (TeX Live 2024) (preloaded format=uplatex 2024.8.24)  24 AUG 2024 14:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/latex/sample/sample
-(/latex/sample/sample.tex
+**sample.tex
+(./sample.tex
 pLaTeX2e <2023-02-14u04>+1, based on
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-07-20>
@@ -48,21 +48,25 @@ LaTeX Info: Redefining \LaTeX on input line 135.
 LaTeX Info: Redefining \LaTeXe on input line 188.
 )
 \heisei=\count267
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2024/05/23 v2.17q AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks18
 \ex@=\dimen163
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen164
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count268
@@ -112,44 +116,58 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks23
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2024/05/23 v1.4g Standard LaTeX Graphics (DPC,SPQR)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: dvipdfmx.def on input line 106.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-def/dvipdfmx.def
 File: dvipdfmx.def 2022/09/22 v5.0m Graphics/color driver for dvipdfmx
 ))
 \Gin@req@height=\dimen172
 \Gin@req@width=\dimen173
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/color.sty
 Package: color 2024/01/14 v1.3d Standard LaTeX Color (DPC)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: dvipdfmx.def on input line 149.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)) (/usr/local/texlive/2024/texmf-dist/tex/latex/ascmac/ascmac.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/ascmac/ascmac.sty
 Package: ascmac 2020/01/15 v2.1 ascmac wrapper (community edition) 
- (/usr/local/texlive/2024/texmf-dist/tex/latex/ascmac/tascmac.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/ascmac/tascmac.sty
 Package: tascmac 2020/01/15 v2.1 ascmac package (community edition) 
 \@savetbaselineshift=\dimen174
 \@saveybaselineshift=\dimen175
@@ -168,17 +186,21 @@ Package: tascmac 2020/01/15 v2.1 ascmac package (community edition)
 \@@bwsp=\box80
 \@bcal=\count280
 \shaderule=\dimen179
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/multirow/multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip55
 \multirow@cntb=\count281
 \multirow@dima=\skip56
 \bigstrutjot=\dimen180
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
- (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
- (/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 \Gm@cnth=\count282
@@ -193,9 +215,11 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen187
 \Gm@layoutvoffset=\dimen188
 \Gm@dimlist=\toks25
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen189
 \captionmargin=\dimen190
@@ -207,7 +231,11 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen196
 Package caption Info: Unknown document class (or package),
 (caption)             standard defaults will be used.
-Package caption Info: \@makecaption = \long macro:#1#2->{\small \advance \leftskip .0628\linewidth \advance \rightskip .0628\linewidth \vskip \abovecaptionskip \sbox \@tempboxa {#1\hskip 1zw\relax #2}\ifdim \wd \@tempboxa <\hsize \centering \fi #1{\hskip 1zw\relax }#2\par \vskip \belowcaptionskip } on input line 1175.
+Package caption Info: \@makecaption = \long macro:#1#2->{\small \advance \lefts
+kip .0628\linewidth \advance \rightskip .0628\linewidth \vskip \abovecaptionski
+p \sbox \@tempboxa {#1\hskip 1zw\relax #2}\ifdim \wd \@tempboxa <\hsize \center
+ing \fi #1{\hskip 1zw\relax }#2\par \vskip \belowcaptionskip } on input line 11
+75.
 )
 
 Package caption Warning: Unknown document class (or package),
@@ -222,9 +250,11 @@ Package caption Info: New subtype `subfigure' on input line 238.
 \c@subfigure=\count287
 Package caption Info: New subtype `subtable' on input line 238.
 \c@subtable=\count288
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/dcolumn.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/dcolumn.sty
 Package: dcolumn 2023/07/08 v1.06 decimal alignment package (DPC)
- (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/tools/array.sty
 Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
 \col@sep=\dimen197
 \ar@mcellbox=\box81
@@ -233,7 +263,8 @@ Package: array 2024/06/14 v2.6d Tabular extension package (FMi)
 \extratabsurround=\skip57
 \backup@length=\skip58
 \ar@cellbox=\box82
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/fancybox/fancybox.sty
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/fancybox/fancybox.sty
 Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
@@ -275,11 +306,14 @@ Package: siunitx 2024-08-20 v3.3.21 A comprehensive (SI) units package
 \l__siunitx_unit_tmp_int=\count300
 \l__siunitx_unit_position_int=\count301
 \l__siunitx_unit_total_int=\count302
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/mhchem/mhchem.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/mhchem/mhchem.sty
 Package: mhchem 2024/01/29 v4.10 for typesetting chemical formulae
- (/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2024-07-20 L3 programming layer (loader) 
- (/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-dvips.def
 File: l3backend-dvips.def 2024-05-08 L3 backend support: dvips
 \l__pdf_internal_box=\box93
 \l__pdf_backend_content_box=\box94
@@ -287,7 +321,8 @@ File: l3backend-dvips.def 2024-05-08 L3 backend support: dvips
 \g__pdf_backend_annotation_int=\count303
 \g__pdf_backend_link_int=\count304
 \g__pdf_backend_link_sf_int=\count305
-)) (/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+))
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
 Package: l3keys2e 2024-05-08 LaTeX2e option processing using LaTeX3 keys
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
@@ -301,10 +336,13 @@ LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count308
 \calc@Cskip=\skip61
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/chemgreek/chemgreek.sty (/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/chemgreek/chemgreek.sty
+(/usr/local/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2024-05-08 L3 Experimental document command parser
 )
-Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use in chemistry (CN)
+Package: chemgreek 2020/01/16 v1.1a interface for upright Greek letters for use
+ in chemistry (CN)
 \l__chemgreek_tmpa_int=\count309
 \g__chemgreek_tmpa_int=\count310
 )
@@ -330,11 +368,13 @@ Package mhchem Warning: You did not specify a 'version' option for the mhchem
 (mhchem)                package. Please write \usepackage[version=4]{mhchem}
 (mhchem)                in your preamble (or any lower number for
 (mhchem)                compatibility mode), because you might get slightly
-(mhchem)                different output with the same input in future versions.
+(mhchem)                different output with the same input in future versions
+.
 
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2020/03/25 PSNFSS-v9.3 (SPQR) 
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \ttl@box=\box96
 \beforetitleunit=\skip72
@@ -345,8 +385,10 @@ Package: titlesec 2023/10/27 v2.16 Sectioning titles
 \titlewidth=\dimen269
 \titlewidthlast=\dimen270
 \titlewidthfirst=\dimen271
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and footers
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and foote
+rs
 \f@nch@headwidth=\skip74
 \f@nch@O@elh=\skip75
 \f@nch@O@erh=\skip76
@@ -356,13 +398,16 @@ Package: fancyhdr 2024/07/23 v4.3.1 Extensive control of page headers and footer
 \f@nch@O@erf=\skip80
 \f@nch@O@olf=\skip81
 \f@nch@O@orf=\skip82
-) (/usr/local/texlive/2024/texmf-dist/tex/latex/cite/cite.sty
+)
+(/usr/local/texlive/2024/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 41.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 4
+1.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (./sample.aux)
 \openout1 = `sample.aux'.
@@ -442,23 +487,30 @@ LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 LaTeX Font Info:    Font shape `JY2/mc/m/n' will be
 (Font)              scaled to size 4.62341pt on input line 49.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
+
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JT2/mc/m/n' will be
 (Font)              scaled to size 6.47278pt on input line 49.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 54.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 5
+4.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 File: figure/sample.png Graphic file (type bmp)
 <figure/sample.png>
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 69.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 6
+9.
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `JT2/gt/m/n' will be
@@ -503,12 +555,12 @@ L3 programming layer <2024-07-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9618 strings out of 475686
- 203607 string characters out of 5778925
+ 9617 strings out of 475686
+ 203567 string characters out of 5778925
  1928802 words of memory out of 5000000
  32306 multiletter control sequences out of 15000+600000
  571554 words of font info for 94 fonts, out of 8000000 for 9000
  41 hyphenation exceptions out of 8191
- 65i,13n,79p,388b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 65i,13n,79p,378b,744s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on sample.dvi (2 pages, 4932 bytes).
