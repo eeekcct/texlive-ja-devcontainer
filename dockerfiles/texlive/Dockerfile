@@ -38,8 +38,9 @@ RUN ln -sf /usr/local/texlive/*/bin/* /usr/local/bin/texlive
 ENV PATH="/usr/local/bin/texlive:$PATH"
 
 # 必要なパッケージをインストール
-RUN tlmgr update --self --all \
-  && tlmgr install collection-fontsrecommended collection-langjapanese 
+RUN tlmgr update --self --all
+
+RUN tlmgr install collection-fontsrecommended collection-langjapanese 
   # 時間がかかるのでコメントアウト
   # collection-latexextra latexmk
 
