@@ -45,7 +45,6 @@ RUN tlmgr install collection-fontsrecommended collection-langjapanese
   # collection-latexextra latexmk
 
 # 追加パッケージのインストール
-RUN tlmgr update --self --all \
-  && tlmgr install cite multirow caption fancybox siunitx mhchem titlesec chemgreek
+RUN tlmgr install cite multirow caption fancybox siunitx mhchem titlesec chemgreek
 
 WORKDIR /latex
