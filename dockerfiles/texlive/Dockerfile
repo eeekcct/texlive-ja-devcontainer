@@ -40,13 +40,11 @@ ENV PATH="/usr/local/bin/texlive:$PATH"
 # 必要なパッケージをインストール
 RUN tlmgr update --self --all
 
-RUN tlmgr option repository auto \
-  && tlmgr install collection-fontsrecommended collection-langjapanese 
+RUN tlmgr install collection-fontsrecommended collection-langjapanese 
   # 時間がかかるのでコメントアウト
   # collection-latexextra latexmk
 
 # 追加パッケージのインストール
-RUN tlmgr option repository auto \
-  && tlmgr install cite multirow caption fancybox siunitx mhchem titlesec chemgreek
+RUN tlmgr install cite multirow caption fancybox siunitx mhchem titlesec chemgreek
 
 WORKDIR /latex
