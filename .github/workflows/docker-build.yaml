@@ -71,9 +71,9 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          key: ${{ runner.os }}-buildx-${{ hashFiles('dockerfiles/pdf-to-image/Dockerfile') }}-${{ github.sha }}
           restore-keys: |
-            ${{ runner.os }}-buildx-
+            ${{ runner.os }}-buildx-${{ hashFiles('dockerfiles/pdf-to-image/Dockerfile') }}-
 
       - name: Build pdf-to-image
         run: make buildx.pdf
