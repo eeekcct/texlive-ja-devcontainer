@@ -1,4 +1,4 @@
-FROM debian:12.7-slim
+FROM debian:12.8-slim
 
 RUN apt update && apt install --no-install-recommends -y \
   poppler-utils \
