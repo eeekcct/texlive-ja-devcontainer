@@ -8,6 +8,7 @@ RUN apt update && apt install --no-install-recommends -y \
   convmv \
   make \
   locales \
+  ca-certificates \
   # collection-langjapanese インストール時に必要なパッケージ
   # xetex: error while loading shared libraries: libfontconfig.so.1: cannot open shared object file: No such file or directory
   libfontconfig \
