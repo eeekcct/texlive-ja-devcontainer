@@ -1,0 +1,54 @@
+name: Replace Sample PDF
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: replace-sample-pdf
+  cancel-in-progress: false
+
+jobs:
+  replace-sample-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@8d2750c68a42422c14e847fe6c8ac0403b4cbd6f # v3.12.0
+
+      - name: Build TeX Live image
+        uses: docker/build-push-action@10e90e3645eae34f1e60eeb005ba3a3d33f178e8 # v6.19.2
+        with:
+          context: .
+          file: ./dockerfiles/texlive/Dockerfile
+          load: true
+          tags: texlive-ja:replace-sample-pdf
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Generate sample PDF
+        working-directory: sample
+        run: |
+          docker run --rm -v "$PWD:/latex" texlive-ja:replace-sample-pdf bash -c \
+            "ptex2pdf -u -l -ot '-kanji=utf8 -synctex=1 -interaction=nonstopmode' sample.tex && \
+            pbibtex sample && \
+            ptex2pdf -u -l -ot '-kanji=utf8 -synctex=1 -interaction=nonstopmode' sample.tex && \
+            ptex2pdf -u -l -ot '-kanji=utf8 -synctex=1 -interaction=nonstopmode' sample.tex"
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@5f6978faf089d4d20b00c7766989d076bb2fc7f1 # v8.1.1
+        with:
+          add-paths: sample/sample.pdf
+          branch: automation/replace-sample-pdf
+          delete-branch: true
+          commit-message: "docs: replace sample PDF"
+          title: "docs: replace sample PDF"
+          body: |
+            TeX Liveイメージを使って `sample/sample.pdf` を再生成しました。
+
+            このPRは `Replace Sample PDF` workflowによって自動作成されています。
