@@ -4,7 +4,9 @@ RUN apt update && apt install --no-install-recommends -y \
   wget \
   unzip \
   perl \
-  cpanminus \
+  # latexindent が動作するために必要な Perl モジュール
+  libyaml-tiny-perl \
+  libfile-homedir-perl \
   convmv \
   make \
   locales \
@@ -19,9 +21,6 @@ RUN apt update && apt install --no-install-recommends -y \
 RUN sed -i 's/# ja_JP.UTF-8 UTF-8/ja_JP.UTF-8 UTF-8/' /etc/locale.gen \
   && locale-gen
 ENV LANG=ja_JP.UTF-8
-
-# latexindent が動作するために必要なパッケージをインストール
-RUN cpanm YAML::Tiny File::HomeDir
 
 # texlive のインストール
 WORKDIR /tmp
