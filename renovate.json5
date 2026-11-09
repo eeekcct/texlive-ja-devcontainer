@@ -2,10 +2,53 @@
   $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: ["config:recommended"],
   timezone: "Asia/Tokyo",
+  customManagers: [
+    {
+      customType: "regex",
+      managerFilePatterns: ["/^dockerfiles/texlive/Dockerfile$/"],
+      matchStrings: ["ARG TEXLIVE_YEAR=(?<currentValue>[0-9]{4})\\n"],
+      depNameTemplate: "TeX Live release",
+      packageNameTemplate: "texlive",
+      datasourceTemplate: "custom.texlive-year",
+      versioningTemplate: "regex:^(?<major>[0-9]{4})$",
+    },
+    {
+      customType: "regex",
+      managerFilePatterns: ["/^dockerfiles/texlive/Dockerfile$/"],
+      matchStrings: ["ARG TEXLIVE_TLNET_SHA512=(?<currentDigest>[0-9a-f]{128})\\n"],
+      depNameTemplate: "TeX Live packages",
+      packageNameTemplate: "tlnet",
+      datasourceTemplate: "custom.texlive-tlnet",
+      // This is the rolling channel, not a TeX Live release number.
+      currentValueTemplate: "tlnet",
+      versioningTemplate: "regex:^tlnet(?:-(?<major>[0-9]+))?$",
+    },
+  ],
+  customDatasources: {
+    "texlive-year": {
+      defaultRegistryUrlTemplate: "https://www.ctan.org/json/2.0/pkg/texlive",
+      transformTemplates: ['{"releases": [{"version": version.number}]}'],
+    },
+    "texlive-tlnet": {
+      defaultRegistryUrlTemplate: "https://tug.ctan.org/systems/texlive/tlnet/tlpkg/texlive.tlpdb.sha512",
+      format: "plain",
+      transformTemplates: [
+        '{"releases": [releases[$contains(version, /^[0-9a-f]{128}\\s+texlive\\.tlpdb$/)].{"version": "tlnet", "digest": $substring(version, 0, 128)}]}',
+      ],
+    },
+  },
   packageRules: [
     {
       matchManagers: ["github-actions"],
       pinDigests: true,
+    },
+    {
+      matchDatasources: ["custom.texlive-year", "custom.texlive-tlnet"],
+      groupName: "TeX Live",
+      separateMajorMinor: false,
+      schedule: ["before 3am on Monday"],
+      // Review TeX changes and PDF differences before merging during this trial.
+      automerge: false,
     },
     {
       // Track rebuilt base images even when their version tag stays the same.
