@@ -7,6 +7,11 @@
       matchManagers: ["github-actions"],
       pinDigests: true,
     },
+    {
+      // Track rebuilt base images even when their version tag stays the same.
+      matchDatasources: ["docker"],
+      pinDigests: true,
+    },
   ],
   lockFileMaintenance: {
     enabled: true,
